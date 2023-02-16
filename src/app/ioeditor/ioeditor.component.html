@@ -1,0 +1,95 @@
+<div class="container">
+    <h3>Update existing user</h3>
+        <form #userForm="ngForm">
+            <div class="form-group accordion-body">
+                <div class="col col-6">
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <label for="name">Username</label>
+                        </div>
+                        <div class="col-6">
+                            <input disabled type="text" class="form-control" id="username"
+                                required
+                                [(ngModel)]="model.username" name="username">
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-3">
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="firstName"
+                                required
+                                [(ngModel)]="model.firstName" name="firstName">
+                        </div>
+                    </div>
+                    <div class="row align-items-center">    
+                        <div class="col-3">
+                            <label for="group">Group</label>
+                        </div>
+                        <div class="col-6">
+                            <select class="form-control"  id="group"
+                                required
+                                [(ngModel)]="model.group" name="group">
+                                <option *ngFor="let g of groups" [value]="g.name">{{g.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-12">
+                    <br />
+                        <table class="table">
+                            <tr>
+                                <th class="col col-1">Day</th>
+                                <th class="col col-2">Status</th>
+                                <th class="col col-1">Start</th>
+                                <th class="col col-1">End</th>
+                                <th class="col col-6">Notes</th>
+                            </tr>
+                            <tr>
+                                <td>Monday</td>
+                                <td>
+                                    <select class="form-control {{model.mondayStatus}}"
+                                        id="mondayStatus"
+                                        name="mondayStatus"
+                                        [(ngModel)]="model.mondayStatus"
+                                        required
+                                    >
+                                        <option *ngFor="let s of statuses" [value]="s.name">{{s.name}}</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control"
+                                        id="mondayStart"
+                                        name="mondayStart"
+                                        [(ngModel)]="model.mondayStart"
+                                        required
+                                        >
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control"
+                                        id="mondayEnd"
+                                        name="mondayEnd"
+                                        [(ngModel)]="model.mondayEnd"
+                                        required
+                                        >
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control"
+                                        id="mondayNotes"
+                                        name="mondayNotes"
+                                        [(ngModel)]="model.mondayNotes"
+                                        required
+                                        >
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+        </form>
+</div>
+
+  <br />
+
+
+{{ model | json }}

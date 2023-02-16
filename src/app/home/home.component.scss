@@ -1,0 +1,56 @@
+th {
+    background-color: silver !important;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+.name {
+    background-color: #E0E0E0 !important;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table-bordered {
+    border-color: black;
+}
+
+.Holiday {
+    background-color: lightgoldenrodyellow;
+}
+
+.Office {
+    background-color: #32CD32;
+}
+
+.WFH {
+    background-color: LightSkyBlue;
+}
+
+.Offsite {
+    background-color: #9370DB;
+}
+
+.Out {
+    background-color: red;
+}
+
+.Training {
+    background-color: hotpink;
+}
+
+.today {
+    font-weight: bold;
+}
+
+.notes {
+    font-size: small;
+    font-weight: lighter;
+}
+
+.form-group {
+    background-color: lightgray;
+    border-style: ridge;
+}
